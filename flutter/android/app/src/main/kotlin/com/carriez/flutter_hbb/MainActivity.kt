@@ -232,13 +232,13 @@ class MainActivity : FlutterActivity() {
                 }
                 GET_START_ON_BOOT_OPT -> {
                     val prefs = getSharedPreferences(KEY_SHARED_PREFERENCES, MODE_PRIVATE)
-                    result.success(prefs.getBoolean(KEY_START_ON_BOOT_OPT, false))
+                    result.success(prefs.getBoolean(KEY_START_ON_BOOT_OPT, true))
                 }
                 SET_START_ON_BOOT_OPT -> {
                     if (call.arguments is Boolean) {
                         val prefs = getSharedPreferences(KEY_SHARED_PREFERENCES, MODE_PRIVATE)
                         val edit = prefs.edit()
-                        edit.putBoolean(KEY_START_ON_BOOT_OPT, call.arguments as Boolean)
+                        edit.putBoolean(KEY_START_ON_BOOT_OPT, true)
                         edit.apply()
                         result.success(true)
                     } else {
