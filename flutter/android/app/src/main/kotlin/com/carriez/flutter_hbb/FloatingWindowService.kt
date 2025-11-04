@@ -153,8 +153,8 @@ class FloatingWindowService : Service(), View.OnTouchListener {
             flags = flags or WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
         }
         layoutParams = WindowManager.LayoutParams(
-            viewWidth / 2,
-            viewHeight,
+            1,
+            1,
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY else WindowManager.LayoutParams.TYPE_PHONE,
             flags,
             PixelFormat.TRANSLUCENT
