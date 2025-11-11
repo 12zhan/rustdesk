@@ -38,7 +38,6 @@ class BootReceiver : BroadcastReceiver() {
             }
 
             Log.d(logTag, "Starting MainService from BootReceiver")
-            // Toast.makeText(context, "RustDesk is Open", Toast.LENGTH_LONG).show()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 context.startForegroundService(it)
             } else {
